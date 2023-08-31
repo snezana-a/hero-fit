@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "567016700326",
+    "project_id": "herofit-fd275",
+    "storage_bucket": "herofit-fd275.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567016700326:android:e05434ce10c8d8ecc8b767",
+        "android_client_info": {
+          "package_name": "com.example.hero_fit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567016700326-4501588l0muej9j6ifpiiafhh6mteo82.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFKcrx8SoWsDEifH7VH0aDxWpHHLFzI2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567016700326-4501588l0muej9j6ifpiiafhh6mteo82.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -34,10 +34,10 @@ class WelcomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Log In Button
                     ElevatedButton(
-                      onPressed: () {
-                        // login logic
+                      onPressed: () async {
+                        await Future.delayed(const Duration(milliseconds: 100));
+                        Navigator.pushNamed(context, 'login_screen');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -48,10 +48,10 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 16),
-
                     ElevatedButton(
-                      onPressed: () {
-                        // registration logic
+                      onPressed: () async {
+                        await Future.delayed(const Duration(milliseconds: 100));
+                        Navigator.pushNamed(context, 'registration_screen');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
