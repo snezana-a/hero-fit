@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hero_fit/screens/home_screen.dart';
 import 'package:hero_fit/screens/login_screen.dart';
 import 'package:hero_fit/screens/parameters_screen.dart';
 import 'package:hero_fit/screens/registration_screen.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         'welcome_screen': (context) => WelcomeScreen(),
         'registration_screen': (context) => const RegistrationScreen(),
         'login_screen': (context) => const LoginScreen(),
-        'parameters_screen': (context) => ParametersScreen()
+        'parameters_screen': (context) => ParametersScreen(),
+        'home_screen': (context) => const HomeScreen()
       },
     );
   }

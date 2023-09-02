@@ -53,7 +53,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             .collection('users')
             .doc(newUser.user?.uid)
             .set({'email': email, 'items': []});
-        Navigator.pushNamed(context, 'login_screen');
+        Navigator.pushNamed(context, 'parameters_screen');
       }
     } catch (e) {
       print(e);
