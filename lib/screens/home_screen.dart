@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         IconButton(
                           onPressed: () {
-                            // Handle button tap
+                            Navigator.pushNamed(context, 'workouts_screen');
                           },
                           icon: Image.asset(
                             'assets/barbell.png',
@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         IconButton(
                           onPressed: () {
-                            // Handle button tap
+                            Navigator.pushNamed(context, 'nutrition_screen');
                           },
                           icon: Image.asset(
                             'assets/nutrition.png',
@@ -78,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         IconButton(
                           onPressed: () {
-                            // Handle button tap
+                            Navigator.pushNamed(context, 'settings_screen');
                           },
                           icon: Image.asset(
                             'assets/settings.png',
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         IconButton(
                           onPressed: () {
-                            // Handle button tap
+                            Navigator.pushNamed(context, 'progress_screen');
                           },
                           icon: Image.asset(
                             'assets/goal.png',
