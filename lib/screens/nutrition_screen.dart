@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../shared/MenuTile.dart';
+
+// Abstract class for nutrition tiles
 class NutritionScreen extends StatelessWidget {
-  const NutritionScreen({super.key});
+  const NutritionScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,34 +48,23 @@ class NutritionScreen extends StatelessWidget {
               Expanded(
                 child: ListView(
                   children: <Widget>[
-                    _buildNutritionTile(
-                      'assets/diary.png',
-                      'Food Diary',
-                      () {
+                    FoodDiaryTile(
+                      onPressed: () {
                         // Handle button tap
                       },
                     ),
-                    const SizedBox(height: 10.0),
-                    _buildNutritionTile(
-                      'assets/recipe-book.png',
-                      'Recipes',
-                      () {
+                    RecipesTile(
+                      onPressed: () {
                         Navigator.pushNamed(context, 'recipes_screen');
                       },
                     ),
-                    const SizedBox(height: 10.0),
-                    _buildNutritionTile(
-                      'assets/salad.png',
-                      'Nutrition Info',
-                      () {
+                    NutritionInfoTile(
+                      onPressed: () {
                         // Handle button tap
                       },
                     ),
-                    const SizedBox(height: 10.0),
-                    _buildNutritionTile(
-                      'assets/communities.png',
-                      'Community',
-                      () {
+                    CommunityTile(
+                      onPressed: () {
                         // Handle button tap
                       },
                     ),
@@ -89,23 +81,6 @@ class NutritionScreen extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildNutritionTile(
-      String imagePath, String workoutName, Function() onPressed) {
-    return ListTile(
-      leading: Image.asset(
-        imagePath,
-        width: 80,
-        height: 80,
-      ),
-      title: Text(workoutName,
-          style: const TextStyle(
-            fontSize: 24,
-            color: Colors.teal,
-          )),
-      onTap: onPressed,
     );
   }
 }

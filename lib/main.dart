@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hero_fit/screens/home_screen.dart';
@@ -6,7 +5,6 @@ import 'package:hero_fit/screens/login_screen.dart';
 import 'package:hero_fit/screens/nutrition_screen.dart';
 import 'package:hero_fit/screens/parameters_screen.dart';
 import 'package:hero_fit/screens/progress_screen.dart';
-import 'package:hero_fit/screens/recipe_details_screen.dart';
 import 'package:hero_fit/screens/recipes_screen.dart';
 import 'package:hero_fit/screens/registration_screen.dart';
 import 'package:hero_fit/screens/settings_screen.dart';
