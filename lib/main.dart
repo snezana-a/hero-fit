@@ -6,6 +6,8 @@ import 'package:hero_fit/screens/login_screen.dart';
 import 'package:hero_fit/screens/nutrition_screen.dart';
 import 'package:hero_fit/screens/parameters_screen.dart';
 import 'package:hero_fit/screens/progress_screen.dart';
+import 'package:hero_fit/screens/recipe_details_screen.dart';
+import 'package:hero_fit/screens/recipes_screen.dart';
 import 'package:hero_fit/screens/registration_screen.dart';
 import 'package:hero_fit/screens/settings_screen.dart';
 import 'package:hero_fit/screens/welcome_screen.dart';
@@ -33,7 +35,8 @@ class MyApp extends StatelessWidget {
         'workouts_screen': (context) => WorkoutsScreen(),
         'nutrition_screen': (context) => const NutritionScreen(),
         'settings_screen': (context) => const SettingsScreen(),
-        'progress_screen': (context) => const ProgressScreen()
+        'progress_screen': (context) => const ProgressScreen(),
+        'recipes_screen': (context) => RecipesScreen()
       },
     );
   }

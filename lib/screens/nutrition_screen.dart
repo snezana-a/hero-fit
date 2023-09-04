@@ -57,7 +57,7 @@ class NutritionScreen extends StatelessWidget {
                       'assets/recipe-book.png',
                       'Recipes',
                       () {
-                        // Handle button tap
+                        Navigator.pushNamed(context, 'recipes_screen');
                       },
                     ),
                     const SizedBox(height: 10.0),
