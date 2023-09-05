@@ -10,6 +10,7 @@ import 'package:hero_fit/screens/registration_screen.dart';
 import 'package:hero_fit/screens/settings_screen.dart';
 import 'package:hero_fit/screens/welcome_screen.dart';
 import 'package:hero_fit/screens/workouts_screen.dart';
+import 'package:hero_fit/screens/your_profile_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         'nutrition_screen': (context) => const NutritionScreen(),
         'settings_screen': (context) => const SettingsScreen(),
         'progress_screen': (context) => const ProgressScreen(),
-        'recipes_screen': (context) => RecipesScreen()
+        'recipes_screen': (context) => RecipesScreen(),
+        'your_profile_screen': (context) => YourProfileScreen(),
       },
     );
   }

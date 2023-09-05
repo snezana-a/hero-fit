@@ -49,7 +49,7 @@ class SettingsScreen extends StatelessWidget {
                       'assets/user.png',
                       'Your Profile',
                       () {
-                        // Handle button tap
+                        Navigator.pushNamed(context, 'your_profile_screen');
                       },
                     ),
                     const SizedBox(height: 10.0),
