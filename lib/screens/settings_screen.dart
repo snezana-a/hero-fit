@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../builders/custom_list_item_builder.dart';
+
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
@@ -45,53 +47,37 @@ class SettingsScreen extends StatelessWidget {
               Expanded(
                 child: ListView(
                   children: <Widget>[
-                    _buildSettingsTile(
-                      'assets/user.png',
-                      'Your Profile',
-                      () {
-                        Navigator.pushNamed(context, 'your_profile_screen');
-                      },
-                    ),
+                    CustomListItemBuilder()
+                        .setText('Your Profile')
+                        .setImagePath('assets/user.png')
+                        .setOnPressed(() {
+                      Navigator.pushNamed(context, 'your_profile_screen');
+                    }).build(),
                     const SizedBox(height: 10.0),
-                    _buildSettingsTile(
-                      'assets/smart-watch.png',
-                      'Sync With Devices',
-                      () {
-                        // Handle button tap
-                      },
-                    ),
+                    CustomListItemBuilder()
+                        .setText('Sync With Devices')
+                        .setImagePath('assets/smart-watch.png')
+                        .setOnPressed(() {}).build(),
                     const SizedBox(height: 10.0),
-                    _buildSettingsTile(
-                      'assets/notification.png',
-                      'Notifications',
-                      () {
-                        // Handle button tap
-                      },
-                    ),
+                    CustomListItemBuilder()
+                        .setText('Notifications')
+                        .setImagePath('assets/notification.png')
+                        .setOnPressed(() {}).build(),
                     const SizedBox(height: 10.0),
-                    _buildSettingsTile(
-                      'assets/slider.png',
-                      'Adjust Parameters',
-                      () {
-                        // Handle button tap
-                      },
-                    ),
+                    CustomListItemBuilder()
+                        .setText('Adjust Parameters')
+                        .setImagePath('assets/slider.png')
+                        .setOnPressed(() {}).build(),
                     const SizedBox(height: 10.0),
-                    _buildSettingsTile(
-                      'assets/opinion.png',
-                      'Feedback',
-                      () {
-                        // Handle button tap
-                      },
-                    ),
+                    CustomListItemBuilder()
+                        .setText('Feedback')
+                        .setImagePath('assets/opinion.png')
+                        .setOnPressed(() {}).build(),
                     const SizedBox(height: 10.0),
-                    _buildSettingsTile(
-                      'assets/customer-service.png',
-                      'Customer Support',
-                      () {
-                        // Handle button tap
-                      },
-                    ),
+                    CustomListItemBuilder()
+                        .setText('Customer Support')
+                        .setImagePath('assets/customer-service.png')
+                        .setOnPressed(() {}).build(),
                   ],
                 ),
               ),
@@ -105,23 +91,6 @@ class SettingsScreen extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildSettingsTile(
-      String imagePath, String workoutName, Function() onPressed) {
-    return ListTile(
-      leading: Image.asset(
-        imagePath,
-        width: 80,
-        height: 80,
-      ),
-      title: Text(workoutName,
-          style: const TextStyle(
-            fontSize: 24,
-            color: Colors.teal,
-          )),
-      onTap: onPressed,
     );
   }
 }
