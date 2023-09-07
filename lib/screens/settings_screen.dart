@@ -51,33 +51,38 @@ class SettingsScreen extends StatelessWidget {
                         .setText('Your Profile')
                         .setImagePath('assets/user.png')
                         .setOnPressed(() {
-                      Navigator.pushNamed(context, 'your_profile_screen');
+                      Navigator.pushNamed(context, 'my_profile_screen');
                     }).build(),
                     const SizedBox(height: 10.0),
                     CustomListItemBuilder()
                         .setText('Sync With Devices')
                         .setImagePath('assets/smart-watch.png')
-                        .setOnPressed(() {}).build(),
+                        .setOnPressed(() {})
+                        .build(),
                     const SizedBox(height: 10.0),
                     CustomListItemBuilder()
                         .setText('Notifications')
                         .setImagePath('assets/notification.png')
-                        .setOnPressed(() {}).build(),
+                        .setOnPressed(() {})
+                        .build(),
                     const SizedBox(height: 10.0),
                     CustomListItemBuilder()
                         .setText('Adjust Parameters')
                         .setImagePath('assets/slider.png')
-                        .setOnPressed(() {}).build(),
+                        .setOnPressed(() {})
+                        .build(),
                     const SizedBox(height: 10.0),
                     CustomListItemBuilder()
                         .setText('Feedback')
                         .setImagePath('assets/opinion.png')
-                        .setOnPressed(() {}).build(),
+                        .setOnPressed(() {})
+                        .build(),
                     const SizedBox(height: 10.0),
                     CustomListItemBuilder()
                         .setText('Customer Support')
                         .setImagePath('assets/customer-service.png')
-                        .setOnPressed(() {}).build(),
+                        .setOnPressed(() {})
+                        .build(),
                   ],
                 ),
               ),
