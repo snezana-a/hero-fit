@@ -60,7 +60,7 @@ class NutritionScreen extends StatelessWidget {
                     ),
                     NutritionInfoTile(
                       onPressed: () {
-                        // Handle button tap
+                        Navigator.pushNamed(context, 'nutrition_info_screen');
                       },
                     ),
                     CommunityTile(

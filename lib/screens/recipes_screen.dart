@@ -19,8 +19,8 @@ class _RecipesScreenState extends State<RecipesScreen> {
   }
 
   Future<void> fetchRecipes() async {
-    final apiKey = '274267a207d6c3f58a57d4ed243e24db';
-    final appId = '400b9f13';
+    const apiKey = '274267a207d6c3f58a57d4ed243e24db';
+    const appId = '400b9f13';
     final response = await http.get(
       Uri.parse(
           'https://api.edamam.com/search?q=$query&app_id=$appId&app_key=$apiKey'),
@@ -28,8 +28,6 @@ class _RecipesScreenState extends State<RecipesScreen> {
 
     if (response.statusCode == 200) {
       setState(() {
-        print('API response body: ${response.body}');
-        print('API response body hits: ${response.body}["hits"]');
         recipes = json.decode(response.body)['hits'];
       });
     } else {
