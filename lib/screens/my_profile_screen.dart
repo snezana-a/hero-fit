@@ -32,6 +32,13 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
   void initState() {
     super.initState();
     _loadUserData();
+    reloadData();
+  }
+
+  Future<void> reloadData() async {
+    // Reload your user profile data here, for example, by calling loadUserData()
+    await _loadUserData();
+    setState(() {});
   }
 
   Future<void> _pickImage(ImageSource source) async {
@@ -289,22 +296,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                         padding: const EdgeInsets.symmetric(vertical: 16.0)),
                     child: const Text('Change Profile Picture'),
                   ),
-                  const SizedBox(
-                    width: 12.0,
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.lightBlueAccent,
-                        backgroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(vertical: 16.0)),
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'parameters_screen');
-                    },
-                    child: const Text(
-                      'Change parameters',
-                      style: TextStyle(color: Colors.lightBlueAccent),
-                    ),
-                  )
                 ],
               )
             ],

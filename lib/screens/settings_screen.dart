@@ -69,8 +69,9 @@ class SettingsScreen extends StatelessWidget {
                     CustomListItemBuilder()
                         .setText('Adjust Parameters')
                         .setImagePath('assets/slider.png')
-                        .setOnPressed(() {})
-                        .build(),
+                        .setOnPressed(() {
+                      Navigator.pushNamed(context, 'edit_parameters_screen');
+                    }).build(),
                     const SizedBox(height: 10.0),
                     CustomListItemBuilder()
                         .setText('Feedback')

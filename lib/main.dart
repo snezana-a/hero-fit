@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hero_fit/screens/edit_parameters_screen.dart';
 import 'package:hero_fit/screens/home_screen.dart';
 import 'package:hero_fit/screens/login_screen.dart';
 import 'package:hero_fit/screens/nutrition_info_screen.dart';
@@ -38,7 +39,8 @@ class MyApp extends StatelessWidget {
         'progress_screen': (context) => const ProgressScreen(),
         'recipes_screen': (context) => RecipesScreen(),
         'my_profile_screen': (context) => const MyProfileScreen(),
-        'nutrition_info_screen': (context) => const NutritionInfoScreen()
+        'nutrition_info_screen': (context) => const NutritionInfoScreen(),
+        'edit_parameters_screen': (context) => const EditParametersScreen()
       },
     );
   }

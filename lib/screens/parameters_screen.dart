@@ -70,7 +70,7 @@ class _ParametersScreenState extends State<ParametersScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               const SizedBox(height: 100.0),
               const SizedBox(height: 10.0),
@@ -86,11 +86,8 @@ class _ParametersScreenState extends State<ParametersScreen> {
               const SizedBox(
                 height: 10.0,
               ),
-              _buildCustomDropdownButton(
-                selectedGender,
-                ['Female', 'Male'],
-                'Gender',
-              ),
+              _buildCustomDropdownButton(selectedGender, ['Female', 'Male'],
+                  'Gender', _handleGenderChange),
               const SizedBox(
                 height: 10.0,
               ),
@@ -102,18 +99,18 @@ class _ParametersScreenState extends State<ParametersScreen> {
               _buildCustomTextField('Height (cm)', heightController),
               const SizedBox(height: 10.0),
               _buildCustomDropdownButton(
-                selectedActivityLevel,
-                ['Light', 'Moderate', 'Intensive'],
-                'Activity Level',
-              ),
+                  selectedActivityLevel,
+                  ['Light', 'Moderate', 'Intensive'],
+                  'Activity Level',
+                  _handleActivityLevelChange),
               const SizedBox(
                 height: 10.0,
               ),
               _buildCustomDropdownButton(
-                selectedGoal,
-                ['Gain Weight', 'Lose Weight', 'Maintain Weight'],
-                'Goal',
-              ),
+                  selectedGoal,
+                  ['Gain Weight', 'Lose Weight', 'Maintain Weight'],
+                  'Goal',
+                  _handleGoalChange),
               const SizedBox(height: 16.0),
               const SizedBox(height: 10.0),
               _buildCustomButton('Continue'),
@@ -122,6 +119,30 @@ class _ParametersScreenState extends State<ParametersScreen> {
         ),
       ),
     );
+  }
+
+  void _handleActivityLevelChange(String? newValue) {
+    if (newValue != null) {
+      setState(() {
+        selectedActivityLevel = newValue;
+      });
+    }
+  }
+
+  void _handleGoalChange(String? newValue) {
+    if (newValue != null) {
+      setState(() {
+        selectedGoal = newValue;
+      });
+    }
+  }
+
+  void _handleGenderChange(String? newValue) {
+    if (newValue != null) {
+      setState(() {
+        selectedGender = newValue;
+      });
+    }
   }
 
   Widget _buildCustomTextField(
@@ -143,30 +164,25 @@ class _ParametersScreenState extends State<ParametersScreen> {
   }
 
   Widget _buildCustomDropdownButton(
-      String value, List<String> items, String labelText) {
+    String selectedValue,
+    List<String> items,
+    String labelText,
+    Function(String?)? onChanged,
+  ) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: DropdownButtonFormField<String>(
-        value: value,
-        onChanged: (String? newValue) {
-          setState(() {
-            value = newValue!;
-          });
-        },
-        items: items.map<DropdownMenuItem<String>>((String value) {
+      child: DropdownButton<String>(
+        value: selectedValue,
+        onChanged: onChanged,
+        items: items.map((String item) {
           return DropdownMenuItem<String>(
-            value: value,
-            child: Text(value),
+            value: item,
+            child: Text(item),
           );
         }).toList(),
-        decoration: InputDecoration(
-          labelText: labelText,
-          border: InputBorder.none,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
-        ),
       ),
     );
   }
