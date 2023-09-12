@@ -63,7 +63,7 @@ class WorkoutsScreen extends StatelessWidget {
                       'assets/stretch.png',
                       'Flexibility Training',
                       () {
-                        // Handle button tap
+                        Navigator.pushNamed(context, 'find_fitness_center');
                       },
                     ),
                     const SizedBox(height: 10.0),
