@@ -45,33 +45,17 @@ class WorkoutsScreen extends StatelessWidget {
                   children: <Widget>[
                     _buildWorkoutTile(
                       'assets/jogging.png',
-                      'Aerobic & Anaerobic',
+                      'Search Exercises',
                       () {
-                        // Handle button tap
+                        Navigator.pushNamed(context, 'exercises_search_screen');
                       },
                     ),
                     const SizedBox(height: 10.0),
                     _buildWorkoutTile(
                       'assets/strength.png',
-                      'Strength Training',
-                      () {
-                        // Handle button tap
-                      },
-                    ),
-                    const SizedBox(height: 10.0),
-                    _buildWorkoutTile(
-                      'assets/stretch.png',
-                      'Flexibility Training',
+                      'Find Fitness Centers',
                       () {
                         Navigator.pushNamed(context, 'find_fitness_center');
-                      },
-                    ),
-                    const SizedBox(height: 10.0),
-                    _buildWorkoutTile(
-                      'assets/stretching.png',
-                      'Balance Exercises',
-                      () {
-                        // Handle button tap
                       },
                     ),
                   ],
